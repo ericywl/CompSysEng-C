@@ -6,8 +6,33 @@
 #include <ctype.h>
 
 #define MAX_INPUT 8192
+#define BUFSIZE 256
+#define HISTORY_LIMIT 20
 
-char * get_new_dir(char *cl_copy) {
+typedef char hist_string[MAX_INPUT];
+
+int exec_cmd(char command_line[MAX_INPUT]) {
+    char buf[BUFSIZE];
+    FILE *fp;
+
+    if ((fp = popen(command_line, "r")) == NULL) {
+        printf("Error opening pipe.\n");
+        return -1;
+    }
+
+    while (fgets(buf, BUFSIZE, fp) != NULL) {
+        printf("%s", buf);
+    }
+
+    if (pclose(fp)) {
+        printf("Command not found or exited with error status.\n");
+        return -1;
+    }
+
+    return 0;
+}
+
+char *get_new_dir(char *cl_copy) {
     char temp_path[MAX_INPUT], temp[3];
     char *path, *param;
 
@@ -53,9 +78,19 @@ char * get_new_dir(char *cl_copy) {
     return path;
 }
 
+void insert_history(hist_string *array, char str[MAX_INPUT]) {
+    for (int j = HISTORY_LIMIT - 1; j > 0; j--) {
+        memmove(&array[j], &array[j - 1], sizeof(*array));
+    }
+    // copy str to array[0]
+    strncpy(array[0], str, MAX_INPUT);
+}
+
 int main() {
     char command_line[MAX_INPUT];
     char *cl_copy, *cmd, *path;
+
+    hist_string *array = calloc(HISTORY_LIMIT, sizeof(*array));
 
     while (1) {
         printf("csh> ");
@@ -64,15 +99,47 @@ int main() {
         cl_copy = strdup(command_line);
         cmd = strsep(&cl_copy, " \n");
 
+        // change directory
         if (strcmp(cmd, "cd") == 0) {
             path = get_new_dir(cl_copy);
             chdir(path);
-        } else {
-            system(command_line);
+            insert_history(array, command_line);
+            continue;
         }
 
-        ////--------------Case3, History-------------------------
-        //check if user enters history option
+        // print out history
+        if (strcmp(cmd, "history") == 0) {
+            if (strcmp(array[0], "") == 0) {
+                printf("The history list is empty.\n");
+                continue;
+            }
+
+            for (int i = 0; i < HISTORY_LIMIT; i++) {
+                if (strcmp(array[i], "") != 0)
+                    printf("%5d  %s", i + 1, array[i]);
+            }
+            continue;
+        }
+
+        // execute previous command
+        if (strcmp(cmd, "!!") == 0) {
+            if (strcmp(array[0], "") == 0) {
+                printf("The history list is empty.\n");
+                continue;
+            }
+
+            memset(cl_copy, 0, strlen(cl_copy));
+            strncpy(cl_copy, array[0], strlen(array[0]));
+            exec_cmd(cl_copy);
+            continue;
+        }
+
+        // execute indexed command over here
+
+        // if the command is not all of the above, execute it using system
+        if (exec_cmd(command_line) != -1) {
+            insert_history(array, command_line);
+        }
     }
 
     return (0);
