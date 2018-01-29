@@ -11,11 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea24cb8d-653a-42e0-9704-370198d54f8c" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/lab01_shell/SimpleShell.c" afterPath="$PROJECT_DIR$/lab01_shell/SimpleShell.c" />
-      <change beforePath="$PROJECT_DIR$/lab01_shell/screenshots/shell_q2.png" afterPath="$PROJECT_DIR$/lab01_shell/screenshots/shell_q2.png" />
-      <change beforePath="$PROJECT_DIR$/lab01_shell/shell" afterPath="$PROJECT_DIR$/lab01_shell/shell" />
-    </list>
+    <list default="true" id="ea24cb8d-653a-42e0-9704-370198d54f8c" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -40,8 +36,8 @@
       <file leaf-file-name="SimpleShell.c" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab01_shell/SimpleShell.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="503">
-              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="167">
+              <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -164,12 +160,12 @@
       <workItem from="1517198779978" duration="1367000" />
       <workItem from="1517200740321" duration="137000" />
       <workItem from="1517216585632" duration="5733000" />
-      <workItem from="1517229116112" duration="251000" />
+      <workItem from="1517229116112" duration="541000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24868000" />
+    <option name="totallyTimeSpent" value="25158000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="42" width="1400" height="838" extended-state="0" />
@@ -377,8 +373,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lab01_shell/SimpleShell.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="503">
-          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state relative-caret-position="167">
+          <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
