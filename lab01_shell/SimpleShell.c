@@ -26,7 +26,7 @@ int exec_cmd(char command_line[MAX_INPUT]) {
     }
 
     if (pclose(fp)) {
-        printf("Command not found or exited with error status.\n");
+        // printf("Command not found or exited with error status.\n");
         return -1;
     }
 
