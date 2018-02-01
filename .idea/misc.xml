@@ -3,6 +3,7 @@
   <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
   <component name="CidrRootsConfiguration">
     <sourceRoots>
+      <file path="$PROJECT_DIR$/assignment01" />
       <file path="$PROJECT_DIR$/lab01_shell" />
     </sourceRoots>
   </component>

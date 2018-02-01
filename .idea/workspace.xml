@@ -11,7 +11,19 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea24cb8d-653a-42e0-9704-370198d54f8c" name="Default" comment="" />
+    <list default="true" id="ea24cb8d-653a-42e0-9704-370198d54f8c" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/assignment01/assignment01.c" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompSysEng_C.dir/build.make" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CompSysEng_C.dir/build.make" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile.cmake" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-log.txt" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" />
+      <change beforePath="$PROJECT_DIR$/lab01_shell/SimpleShell.c" afterPath="$PROJECT_DIR$/lab01_shell/SimpleShell.c" />
+      <change beforePath="$PROJECT_DIR$/lab01_shell/shell" afterPath="$PROJECT_DIR$/lab01_shell/shell" />
+    </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,11 +45,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SimpleShell.c" pinned="false" current-in-tab="true">
+      <file leaf-file-name="assignment01.c" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/assignment01/assignment01.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="6864">
+              <caret line="286" column="49" lean-forward="true" selection-start-line="286" selection-start-column="49" selection-end-line="286" selection-end-column="49" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.c" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.c">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SimpleShell.c" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab01_shell/SimpleShell.c">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="167">
-              <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+            <state relative-caret-position="170">
+              <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -61,6 +95,7 @@
         <option value="$PROJECT_DIR$/lab01_shell/test.c" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/lab01_shell/SimpleShell.c" />
+        <option value="$PROJECT_DIR$/assignment01/assignment01.c" />
       </list>
     </option>
   </component>
@@ -98,6 +133,11 @@
             <path>
               <item name="CompSysEng_C" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="CompSysEng-C" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CompSysEng_C" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="CompSysEng-C" type="462c0819:PsiDirectoryNode" />
+              <item name="assignment01" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CompSysEng_C" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
@@ -161,11 +201,14 @@
       <workItem from="1517200740321" duration="137000" />
       <workItem from="1517216585632" duration="5733000" />
       <workItem from="1517229116112" duration="541000" />
+      <workItem from="1517375535669" duration="908000" />
+      <workItem from="1517466943427" duration="6000" />
+      <workItem from="1517466988554" duration="1618000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25158000" />
+    <option name="totallyTimeSpent" value="27690000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="20" y="42" width="1400" height="838" extended-state="0" />
@@ -204,6 +247,60 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lab01_shell/SimpleShell.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab01_shell/SimpleShell.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="19" column="18" lean-forward="true" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="35" lean-forward="false" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lab01_shell/SimpleShell.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -356,6 +453,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/main.c">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -364,17 +469,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.c">
+    <entry file="file://$PROJECT_DIR$/lab01_shell/SimpleShell.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="1" lean-forward="false" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
+        <state relative-caret-position="170">
+          <caret line="46" column="5" lean-forward="true" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lab01_shell/SimpleShell.c">
+    <entry file="file://$PROJECT_DIR$/assignment01/assignment01.c">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="167">
-          <caret line="18" column="50" lean-forward="false" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+        <state relative-caret-position="6864">
+          <caret line="286" column="49" lean-forward="true" selection-start-line="286" selection-start-column="49" selection-end-line="286" selection-end-column="49" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

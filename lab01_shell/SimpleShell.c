@@ -6,34 +6,37 @@
 #include <ctype.h>
 
 #define MAX_INPUT 8192
-#define ARRAY_SIZE 1024
-#define BUFSIZE 256
 #define HISTORY_LIMIT 20
 
 typedef char string[MAX_INPUT];
 
 int exec_cmd(char command_line[MAX_INPUT]) {
-    char buffer1[BUFSIZE];
-    FILE *fp;
+    char * argv[] = {"/bin/bash", "-c", command_line, NULL};
 
-    if ((fp = popen(command_line, "r")) == NULL) {
-        printf("Error opening pipe.\n");
-        return -1;
-    }
+    pid_t pid;
+    pid = fork();
+    if (pid > 0) {
+        // parent wait for child
+        int status;
+        waitpid(pid, &status, 0);
 
-    while (fgets(buffer1, BUFSIZE, fp) != NULL) {
-        printf("%s", buffer1);
-    }
+    } else if (pid < 0) {
+        // failed to fork
+        perror("csh");
 
-    if (pclose(fp)) {
-        // printf("Command not found or exited with error status.\n");
-        return -1;
+    } else {
+        // child executes command
+        if (execvp(argv[0], argv) == -1) {
+            perror("csh");
+            return -1;
+        }
+        exit(EXIT_FAILURE);
     }
 
     return 0;
 }
 
-char *get_new_dir(char *cl_copy) {
+char * get_new_dir(char *cl_copy) {
     char temp_path[MAX_INPUT], temp[3];
     char *path, *param;
     size_t len;
