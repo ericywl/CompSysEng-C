@@ -1,8 +1,10 @@
-#include <stdio.h>
-#include <ntsid.h>
-#include <errno.h>
-#include <memory.h>
-#include <stdlib.h>
+#include<stdio.h>
+#include<sys/types.h>
+#include<unistd.h>
+#include<stdlib.h>
+#include<errno.h>
+#include<string.h>
+#include<ctype.h>
 
 #define INELIGIBLE 0
 #define READY 1
@@ -17,7 +19,7 @@
 typedef struct node {
     int id;
     char prog[MAX_LENGTH];
-    char *args[MAX_LENGTH/2 + 1];
+    char *args[MAX_LENGTH / 2 + 1];
     int num_args;
     char input[MAX_LENGTH];
     char output[MAX_LENGTH];
@@ -30,10 +32,10 @@ typedef struct node {
 } node_t;
 
 /**
- * Search for tokens in the string s, separated by the characters in
+ * Search for tokens in the string s, separated by the characters in 
  * delimiters. Populate the string array at *tokens.
  *
- * Return the number of tokens parsed on success, or -1 and set errno on
+ * Return the number of tokens parsed on success, or -1 and set errno on 
  * failure.
  */
 int parse_tokens(const char *s, const char *delimiters, char ***tokens) {
@@ -64,11 +66,11 @@ int parse_tokens(const char *s, const char *delimiters, char ***tokens) {
     /* Count number of tokens */
     num_tokens = 0;
     if (strtok(t, delimiters) != NULL) {
-        for (num_tokens = 1; strtok(NULL, delimiters) != NULL; num_tokens++) ;
+        for (num_tokens = 1; strtok(NULL, delimiters) != NULL; num_tokens++);
     }
 
     /* Allocate memory for tokens */
-    *tokens = (char**) malloc((num_tokens + 1)*sizeof(char *));
+    *tokens = (char **) malloc((num_tokens + 1) * sizeof(char *));
     if (*tokens == NULL) {
         errno_copy = errno;
         free(t);  // ignore errno from free
@@ -82,8 +84,8 @@ int parse_tokens(const char *s, const char *delimiters, char ***tokens) {
     } else {
         strcpy(t, s_new);
         **tokens = strtok(t, delimiters);
-        for (int i=1; i<num_tokens; i++) {
-            *((*tokens) +i) = strtok(NULL, delimiters);
+        for (int i = 1; i < num_tokens; i++) {
+            *((*tokens) + i) = strtok(NULL, delimiters);
         }
     }
     *((*tokens) + num_tokens) = NULL;  // end with null pointer
@@ -106,7 +108,7 @@ void free_parse_tokens(char **tokens) {
 /**
  * Parse the input line at line, and populate the node at node, which will
  * have id set to id.
- *
+ * 
  * Return 0 on success or -1 and set errno on failure.
  */
 int parse_input_line(char *line, int id, node_t *node) {
@@ -186,7 +188,7 @@ int parse_input_line(char *line, int id, node_t *node) {
 
 /**
  * Parse the file at file_name, and populate the array at n.
- *
+ * 
  * Return the number of nodes parsed on success, or -1 and set errno on
  * failure.
  */
@@ -251,12 +253,12 @@ int parse_node_parents(node_t *nodes, int num_nodes) {
 }
 
 /**
- * Checks the status of each node in the process tree represented by nodes and
+ * Checks the status of each node in the process tree represented by nodes and 
  * verifies whether it can progress to the next stage in the cycle:
  *
  * INELIGIBLE -> READY -> RUNNING -> FINISHED
  *
- * Returns the number of nodes that have finished running, or -1 if there was
+ * Returns the number of nodes that have finished running, or -1 if there was 
  * an error.
  */
 int parse_node_status(node_t *nodes, int num_nodes) {
@@ -270,7 +272,10 @@ int parse_node_status(node_t *nodes, int num_nodes) {
 int print_process_tree(node_t *nodes, int num_nodes) {
 }
 
-int process_mgnt() {
+/**
+ * Takes in a graph file and executes the programs in parallel.
+ */
+int main(int argc, char *argv[]) {
     node_t nodes[MAX_NODES];
     int num_nodes;
     int num_nodes_finished;
@@ -282,6 +287,9 @@ int process_mgnt() {
     /* Parse graph file */
     fprintf(stderr, "Parsing graph file...\n");
     /* INSERT CODE - invocation to parse_graph_files */
+
+
+
 
     /* Parse nodes for parents */
     fprintf(stderr, "Parsing node parents...\n");
@@ -305,11 +313,3 @@ int process_mgnt() {
     fprintf(stderr, "All processes finished. Exiting.\n");
     return EXIT_SUCCESS;
 }
-
-/**
- * Takes in a graph file and executes the programs in parallel.
- */
-int main(int argc, char *argv[]) {
-    return process_mgnt();
-}
-
