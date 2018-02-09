@@ -5,6 +5,7 @@
     <sourceRoots>
       <file path="$PROJECT_DIR$/assignment01" />
       <file path="$PROJECT_DIR$/lab01_shell" />
+      <file path="$PROJECT_DIR$/lab02_multithread" />
     </sourceRoots>
   </component>
 </project>
