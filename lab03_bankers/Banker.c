@@ -125,9 +125,9 @@ void setMaximumDemand(int customerIndex, const int *maximumDemand) {
  * @return 1 if the above is true and 0 if false.
  *
  */
-int greaterThanArray(const int* array1, const int* array2, int numOfElements) {
+int leqArray(const int *array1, const int *array2, int numOfElements) {
     for (int i = 0; i < numOfElements; i++) {
-        if (array1[i] <= array2[i])
+        if (array1[i] > array2[i])
             return 0;
     }
 
@@ -150,7 +150,7 @@ int checkSafe() {
         work[i] = available[i];
 
     for (i = 0; i < numberOfCustomers; i++) {
-        if (finish[i] == 0 && greaterThanArray(need[i], work, numberOfResources) == 0) {
+        if (finish[i] == 0 && leqArray(need[i], work, numberOfResources) == 1) {
             for (j = 0; j < numberOfResources; j++)
                 work[j] += allocation[i][j];
 
