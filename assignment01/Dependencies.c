@@ -1,3 +1,9 @@
+/* Programming Assignment 1
+ * Author: Yap Wei Lok
+ * ID: 1002394
+ * Date: 09/02/2018
+ * */
+
 #include<stdio.h>
 #include<sys/types.h>
 #include<unistd.h>
